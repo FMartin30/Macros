@@ -1,5 +1,5 @@
 /* Semi-automated macro to quantify the number of GFP+ neurons in coronal sections of mouse cerebral cortex
-    Copyright (C) <2022>  <Lorena Bragg-Gonzalo> Contact: lbragg@cnb.csic.es
+    Copyright (C) <2022>  <Lorena Bragg-Gonzalo> Contact: lorenabragggonzalo@gmail.com
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -23,7 +23,7 @@ Ext.getSeriesCount(seriesCount);
 run("Bio-Formats Importer","open=&FilePath color_mode=Colorized view=Hyperstack stack_order=XYCZT series_"+seriesCount+"");
 
 run("Brightness/Contrast...");
-waitForUser("Set the image and label the IUE and L1, L2/3 and L4");
+waitForUser("Set the image and label the whole IUE. Then outline L1, L2/3 and L4 within it");
 
 roiManager("Show All");
 roiManager("Show None");
